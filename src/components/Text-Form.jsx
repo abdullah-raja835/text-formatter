@@ -14,18 +14,23 @@ const Form = (props)=>{
     const lowerCase = ()=>{
         let newText = text.toLowerCase();
         setText(newText)
-    }    
+    }
+    const clearText = ()=>{
+        //   let newText = text.toLowerCase();
+        setText("");
+}  
    
 
 
     return(
         <>
 
-<div class="mb-3">
+<div class="mb-3" data-bs-theme="dark">
   <label for="exampleFormControlTextarea1"  class="form-label"><h1>{props.head}</h1></label>
   <textarea class="form-control" value={text} onChange={change} id="exampleFormControlTextarea1" rows="8"></textarea>
   <button className="check" onClick={upperCase}>TO UPPERCASE</button>
-  <button className="check" onClick={lowerCase}>TO UPPERCASE</button>
+  <button className="check" onClick={lowerCase}>TO LowerCase</button>
+  <button className="check bg-primary " onClick={clearText}>Clear Text</button>
   <div className="container">
     <h2>Your Text Summary</h2>
     <p>{text.split().length}words and {text.length} characters </p>
