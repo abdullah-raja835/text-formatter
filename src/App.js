@@ -6,7 +6,7 @@ function App() {
     <>
       <Nav name ="Text-Formatter" logo="Text-Formatter" two="About us" />
       <div className="container">
-      <Form head="Enter Your Text Here"/>
+      <Form head="Enter Your Text"/>
 
       </div>
     </>
