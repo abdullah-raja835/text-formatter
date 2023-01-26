@@ -30,7 +30,7 @@ const [btn,setbtn]=useState('Enable Dark Mode')
 
 
 const Dark = ()=>{
- if (setmyStyle.color === "white"){
+ if (myStyle.color === "white"){
     setmyStyle({
         color : "black",
         backgroundColor : "white"
@@ -47,11 +47,13 @@ else{
 }
 
 
+
+
     return(
         <>
-<div className="container" style={myStyle}>
+<div className="container" >
 
-<div class="mb-3"  >
+<div class="mb-3" style={myStyle} >
   <label for="exampleFormControlTextarea1"  className="form-label"><h1>{props.head}</h1></label>
   <textarea className="form-control" style={myStyle} value={text} onChange={change} id="exampleFormControlTextarea1" rows="8"></textarea>
   <button className="check" style={myStyle} onClick={upperCase}>TO UPPERCASE</button>
